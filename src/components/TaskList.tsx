@@ -25,8 +25,7 @@ export function TaskList( ) {
       setTasks([...tasks, newTask])
       setNewTaskTitle("")
       return
-    }
-    
+    }    
   }
 
   function handleToggleTaskCompletion(id: number) {
@@ -57,7 +56,7 @@ export function TaskList( ) {
           <button 
             type="submit" 
             data-testid="add-task-button" 
-            onClick={handleCreateNewTask }>
+            onClick={handleCreateNewTask}>
             <FiCheckSquare size={16} color="#fff" />
           </button>
         </div>
