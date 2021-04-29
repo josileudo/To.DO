@@ -23,8 +23,10 @@ export function TaskList( ) {
     }
     if (newTask.title){
       setTasks([...tasks, newTask])
+      setNewTaskTitle("")
       return
     }
+    
   }
 
   function handleToggleTaskCompletion(id: number) {
@@ -37,6 +39,7 @@ export function TaskList( ) {
 
   function handleRemoveTask(id: number) {
     // Remova uma task da listagem pelo ID
+    setTasks(tasks.filter(task => task.id !== id))
   }
 
   return (
@@ -54,7 +57,7 @@ export function TaskList( ) {
           <button 
             type="submit" 
             data-testid="add-task-button" 
-            onClick={handleCreateNewTask}>
+            onClick={handleCreateNewTask }>
             <FiCheckSquare size={16} color="#fff" />
           </button>
         </div>
@@ -77,7 +80,10 @@ export function TaskList( ) {
                 <p>{task.title}</p>
               </div>
 
-              <button type="button" data-testid="remove-task-button" onClick={() => handleRemoveTask(task.id)}>
+              <button 
+                type="button"
+                data-testid="remove-task-button"
+                onClick={() => handleRemoveTask(task.id)}>
                 <FiTrash size={16} />
               </button>
             </li>
