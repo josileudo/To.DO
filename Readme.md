@@ -2,7 +2,7 @@
 Primeiro desafio do Ignite. Aqui será revisto os conceitos aprendidos sobre os Fundamentos do ReactJS
 
 <div align="center"> 
-  <img src= "./assets/to.do.gif" width = "200">
+  <img src= "./assets/to.do.gif" width = "900">
 </div>
 
 <div align="center"> 
